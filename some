@@ -1,0 +1,49 @@
+% Parameters
+f = 10;   % Frequency (in Hz)
+A = 1;    % Amplitude
+t = 0:0.001:1;   % Time (in seconds)
+
+% Generate signals
+x = A*sin(2*pi*f*t);
+x2 = A*sin(2*pi*f*2*t);
+x4 = A*sin(2*pi*f*4*t);
+x025 = A*sin(2*pi*f*0.25*t);
+x00625 = A*sin(2*pi*f*0.0625*t);
+
+% Plot signals
+figure;
+
+subplot(2,3,1);
+plot(t, x);
+title('f = 10 Hz');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Signal');
+
+subplot(2,3,2);
+plot(2*t, x2);
+title('f = 20 Hz');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Signal');
+
+subplot(2,3,3);
+plot(4*t, x4);
+title('f = 40 Hz');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Signal');
+
+subplot(2,3,4);
+plot(0.25*t, x025);
+title('f = 2.5 Hz');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Signal');
+
+subplot(2,3,5);
+plot(0.0625*t, x00625);
+title('f = 0.625 Hz');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Signal');
